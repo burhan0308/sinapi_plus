@@ -14,6 +14,7 @@ Preços conforme SINAPI Agosto/25.
 ## 🚀 **Funcionalidades Principais**
 
 **Simulação de Custos**
+
 Seleção de Itens: Escolha entre composições pré-definidas de infraestrutura.
 
 Quantificação Flexível: Defina quantidades personalizadas para cada item.
@@ -21,6 +22,7 @@ Quantificação Flexível: Defina quantidades personalizadas para cada item.
 Especificação Detalhada: Ajuste parâmetros técnicos conforme necessidade.
 
 **Regionalização de Preços**
+
 Abrangência Nacional: Preços específicos para todos os 27 estados brasileiros.
 
 Atualização Automática: Baseado nos dados oficiais mais recentes do SINAPI.
@@ -28,6 +30,7 @@ Atualização Automática: Baseado nos dados oficiais mais recentes do SINAPI.
 Comparação Regional: Analise variações de custo entre diferentes estados.
 
 **Categorias Implementadas**
+
 Água Potável: Ligações prediais, redes de distribuição, hidrômetros.
 
 Esgoto Sanitário: Redes coletoras, poços de visita, ligações prediais.
@@ -91,7 +94,7 @@ Compare custos entre diferentes estados e exporte resultados para análise.
 
 **1. Clone o repositório**
 ```python
-git clone https://github.com/seu-usuario/sinapi-plus.git
+git clone https://github.com/viviangiulia/sinapi_plus.git
 ```
 
 **2. Acesse o diretório**
