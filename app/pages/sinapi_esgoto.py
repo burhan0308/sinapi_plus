@@ -1,14 +1,16 @@
 import streamlit as st
-
+from pricing.custos_esgoto import custo_total_esgoto
+from ProcessarComposicao import PrecificarComposicao
 
 session = st.session_state
+_, __, coluna = st.columns([3, 1, 1])
+escopo = "Esgoto Sanitário"
 
-tab1, tab2, tab3, tab4 = st.tabs(
+tab1, tab2, tab3 = st.tabs(
     [
         "Ligação Predial de Esgoto",
         "Rede em PVC OCRE",
-        "Poços de Visita e Caixa de Inspeção",
-        "Caixas de Gordura",
+        "Poços de Visita",
     ]
 )
 
@@ -83,4 +85,41 @@ with tab3:
     """
     )
     col__1, col__2 = st.columns((1, 1))
-    
+
+    with col__1:
+        st.number_input(
+            "Poço de Visita - Profundidade até 1,50 m (un)",
+            min_value=0,
+            step=1,
+            key="input_esgoto_pv_max_150",
+        )
+
+        st.number_input(
+            "Poço de Visita - Profundidade entre 2,00 e 2,50 m (un)",
+            min_value=0,
+            step=1,
+            key="input_esgoto_pv_max_250",
+        )
+
+    with col__2:
+        st.number_input(
+            "Poço de Visita - Profundidade entre 1,50 e 2,00 m (un)",
+            min_value=0,
+            step=1,
+            key="input_esgoto_pv_max_200",
+        )
+
+        st.number_input(
+            "Poço de Visita - Profundidade entre 2,50 e 3,00 m (un)",
+            min_value=0,
+            step=1,
+            key="input_esgoto_pv_max_300",
+        )
+
+PrecificarComposicao.finalizar_sincronizacao(escopo)
+custo_total_esgoto(escopo)
+with coluna:
+    st.metric(
+        "Total (R$) - Esgoto Sanitário",
+        0.00,
+    )

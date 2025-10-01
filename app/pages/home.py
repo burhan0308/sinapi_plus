@@ -39,5 +39,5 @@ st.selectbox(
         "SE",
         "TO",
     ],
-    key='input_estado'
+    key='input_estado',
 )

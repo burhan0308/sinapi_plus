@@ -4,19 +4,27 @@ import streamlit as st
 
 
 class PrecificarComposicao:
+    """Processa cada composição cadastrada na base de códigos.
+    Com base nos inputs do usuário (estado e quantidade) realiza a precificação da composição.
+    """
+
     dicionario_resultante = {}
     _processados_no_rerun = defaultdict(set)
 
     def __init__(self, session, codigo_composicao, quantidade, escopo="_default"):
         self.session = session
-        self.estado = session.get("estado", "SP")
+        self.estado = session.get("input_estado", "SP")
         self.codigo_composicao = codigo_composicao
-        self.quantidade_composicao = quantidade
+        self.quantidade_composicao = session.get(quantidade, 0)
         self.escopo = escopo
         self.df_base_composicoes = self.session["arquivos_base"]["base_composicoes"]
         self.df_base_precos = self.session["arquivos_base"][
             "precos_composicoes_insumos"
         ]
+        self.descricao_composicao = self.df_base_composicoes.loc[
+            self.df_base_composicoes["codigo_composicao"] == self.codigo_composicao,
+            "descricao_da_composicao"
+        ].values[0]
 
     @classmethod
     def iniciar_sincronizacao(cls, escopo="_default"):
@@ -69,8 +77,8 @@ class PrecificarComposicao:
         para o estado selecionado."""
 
         estado = self.estado.lower()
-        df_filtrado = self.df_base_precos[["codigo_composicao", estado]].set_index(
-            "codigo_composicao"
+        df_filtrado = self.df_base_precos[["codigo_da_composicao", estado]].set_index(
+            "codigo_da_composicao"
         )
 
         custos = []
@@ -127,6 +135,7 @@ class PrecificarComposicao:
             "custo_total": float(custo_total_composicao),
             "quantidade": self.quantidade_composicao,
             "codigo_base": self.codigo_composicao,
+            "descricao": self.descricao_composicao,
             "estado": self.estado,
             "_escopo": self.escopo,
         }
